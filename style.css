@@ -1,15 +1,14 @@
 /* BEGIN LAYOUT STYLES */
-
-.page {
-  display: flex;
-  /* flex-wrap: wrap; */
+main {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
 }
 
 .section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  margin-bottom: 20px;
+  /* overflow: hidden; */
 }
 
 .menu {
@@ -25,6 +24,7 @@
 
 .sign-up {
   background-color: orange;
+  text-align: center;
 }
 
 .column-1 {
@@ -37,6 +37,7 @@
 
 .column-3 {
   background-color: #1B9CE5;
+  text-align: center;
 }
 
 /* Mobile Styles */
@@ -48,24 +49,15 @@
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-  .sign-up,
-  .column-1,
-  .column-2,
-  .column-3 {
-    width: 50%;
+  main {
+    column-count: 3;
   }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-  .page {
-    margin: 0 auto;
-  }
-
-  .column-1,
-  .column-2,
-  .column-3 {
-    width: 33.3%;
+  main {
+    column-count: 4;
   }
   
   .sign-up {
@@ -77,6 +69,11 @@
   }
 }
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /* BEGIN STYLES FOR TEXT TAGS */
 
