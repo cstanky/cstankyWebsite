@@ -1,43 +1,57 @@
 /* BEGIN LAYOUT STYLES */
 main {
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 1200px;
+  flex: 1;
 }
 
-.section {
-  
-  margin-bottom: 20px;
-  /* overflow: hidden; */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 
 .menu {
   background-color: orange;
   text-align: center;
   height: 40px;
+  grid-column: span 3;
+  border-width: 0;
 }
 
 .content {
   background-color: white;
   height: 600px;
+  grid-column: span 3;
+  border-width: 0;
 }
 
 .sign-up {
   background-color: orange;
   text-align: center;
+  grid-column: span 3;
+  border-width: 0;
+}
+
+div {
+  border-style: solid;
+  border-width: 20px;
+  border-radius: 10px;
 }
 
 .column-1 {
   background-color: #6CDAEE;
+  border-color: #6CDAEE;
 }
 
 .column-2 {
   background-color: #0074E1;
+  border-color: #0074E1;
 }
 
 .column-3 {
   background-color: #1B9CE5;
   text-align: center;
+  border-color: #1B9CE5;
 }
 
 /* Mobile Styles */
@@ -49,30 +63,21 @@ main {
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-  main {
-    column-count: 3;
+  img {
+    width: 400px;
   }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-  main {
-    column-count: 4;
-  }
-  
-  .sign-up {
-    height: 100px;
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
   }
 
   .header {
     height: 400px;
   }
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* BEGIN STYLES FOR TEXT TAGS */
